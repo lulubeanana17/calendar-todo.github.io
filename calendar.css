@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=PT+Serif&family=Poppins&family=Zen+Kaku+Gothic+New&display=swap');
+
+.hidden {
+    display: none;
+}
+
+body {
+    background: rgba(19, 2, 39, 0.9);
+    color: rgb(240, 233, 233);
+    font-family: 'DM Sans';
+    position: relative;
+}
+
+#calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*header*/
+#header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+#previousMove, #nextMove {
+    margin: 0 1em;
+    border-radius: .5em;
+    border: none;
+    background: none;
+    color: rgb(240, 233, 233);
+    cursor: pointer;
+}
+#jumpMove, #selectButton {
+    color: rgb(240, 233, 233);
+    background: none;
+    border: 1px solid rgb(240, 233, 233);
+    border-radius: .5em;
+    margin-bottom: 2em;
+    cursor: pointer;
+    padding: .2em .5em;
+}
+#jumpMove:hover, #selectButton:hover {
+    color: rgba(35, 5, 68, 1);
+    background: rgb(240, 233, 233);
+    transition: .5s;
+}
+#jumpMoveModal {
+    position: absolute;
+    top: 30%;
+    background: rgba(35, 5, 68, 0.7);
+    width: 13em;
+    height: 3.5em;
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+#jumpMoveModal input {
+    width: 5em;
+}
+#selectButton {
+    margin-top: 1em;
+}
+
+/*calendarCells*/
+#calendarCells {
+    display: flex;
+    flex-direction: column;
+}
+#days, #dates div{
+    display: flex;
+}
+#dateCell, #emptyCell, #day {
+    font-size: 20px;
+    width: 3em;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 2561px) {
+    #dateCell, #emptyCell, #day {
+        font-size: 80px;
+    }
+    #header {
+        font-size: 50px;
+    }
+    #jumpMove, #selectButton {
+        font-size: 40px;
+    }
+    #jumpMoveModal {
+        width: 20em;
+        height: 9em;
+    }
+    #jumpMoveModal input {
+        width: 7em;
+        height: 2em;
+    }
+    #jumpMoveModal select {
+        width: 7em;
+        height: 2.3em;
+    }
+}
+
+@media screen and (max-width: 1441px) {
+    #dateCell, #emptyCell, #day {
+        font-size: 40px;
+    }
+    #header {
+        font-size: 25px;
+    }
+    #jumpMove, #selectButton {
+        font-size: 20px;
+    }
+    #jumpMoveModal {
+        width: 15em;
+        height: 5em;
+    }
+    #jumpMoveModal input {
+        width: 7em;
+        height: 1.5em;
+    }
+    #jumpMoveModal select {
+        width: 7em;
+        height: 2em;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #dateCell, #emptyCell, #day {
+        font-size: 35px;
+    }
+    #jumpMove, #selectButton {
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 769px) {
+    #dateCell, #emptyCell, #day {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #dateCell, #emptyCell, #day {
+        font-size: 15px;
+    }
+    #jumpMove, #selectButton {
+        font-size: 13px;
+    }
+    #jumpMoveModal {
+        width: 15em;
+        height: 4em;
+        top: 40%;
+    }
+    #jumpMoveModal input {
+        width: 7em;
+        height: 1.5em;
+    }
+    #jumpMoveModal select {
+        width: 7em;
+        height: 2em;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <script defer src="calendar.js"></script>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+    <div id="calendar">
+        <header id="header">
+            <button id="previousMove">◀</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextMove">▶</button>
+        </header>
+        <button id="jumpMove">Select Month</button>
+        <form id="jumpMoveModal" class="hidden">
+            <input required type="number" placeholder="year">
+            <select name="month" id="selectMonth">
+                <option id="Jan" value="0">January</option>
+                <option id="Feb" value="1">February</option>
+                <option id="Mar" value="2">March</option>
+                <option id="Apr" value="3">April</option>
+                <option id="May" value="4">May</option>
+                <option id="Jun" value="5">June</option>
+                <option id="Jul" value="6">July</option>
+                <option id="Aug" value="7">August</option>
+                <option id="Sep" value="8">September</option>
+                <option id="Oct" value="9">October</option>
+                <option id="Nov" value="10">November</option>
+                <option id="Dec" value="11">December</option>
+            </select>
+            <button id="selectButton">Enter</button>
+        </form>
+        <div id="calendarCells">
+            <div id="days">
+                <div id="day">SUN</div>
+                <div id="day">MON</div>
+                <div id="day">TUE</div>
+                <div id="day">WED</div>
+                <div id="day">THU</div>
+                <div id="day">FRI</div>
+                <div id="day">SAT</div>
+            </div>
+            <div id="dates"></div>
+        </div>
+    </div>
+</body>
+</html>
