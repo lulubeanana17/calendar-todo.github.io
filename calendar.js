@@ -86,8 +86,10 @@ function selectMonth(event) {
 function jumpYearMonth(event) {
     event.preventDefault();
     const yearInput = document.querySelector("#jumpMoveModal input").value;
-    const monthInput = document.querySelector("#selectMonth").value;
-    listUp(yearInput, monthInput);
+    const monthInput = parseInt(document.querySelector("#selectMonth").value);
+    currentYear = yearInput;
+    currentMonth = monthInput;
+    listUp(currentYear, currentMonth);
 }
 
 listUp(currentYear, currentMonth);
