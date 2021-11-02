@@ -221,7 +221,7 @@ body {
 
     /*todoList*/
     #todoContainer {
-        width: 45vh;
+        width: 65vh;
         height: 45vh;
     }
 }
@@ -234,7 +234,7 @@ body {
         height: 2em;
     }
     #todoContainer {
-        width: 45vh;
+        width: 55vh;
         height: 45vh;
     }
 }
@@ -260,7 +260,7 @@ body {
         height: 2em;
     }
     #todoContainer {
-        width: 35vh;
+        width: 45vh;
         height: 35vh;
     }
 }
