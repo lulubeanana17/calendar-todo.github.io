@@ -90,6 +90,58 @@ body {
     margin: 0;
     text-align: center;
 }
+#dateCell {
+    cursor: pointer;
+}
+
+/*todoList*/
+#todoContainer {
+    position: absolute;
+    top: 30%;
+    width: 60vh;
+    height: 50vh;
+    background: rgba(35, 5, 68, 0.9);
+    border-radius: 1em;
+    text-align: center;
+}
+#todo input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(240, 233, 233);
+    
+}
+#todo input[type=text] {
+    font-size: 20px;
+    text-align: center;
+}
+#todo input:focus {
+    outline: none;
+    color: rgb(240, 233, 233);
+    font-size: 20px;
+}
+#closeTodo {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: rgb(240, 233, 233);
+    background: none;
+    border: 1px solid rgb(240, 233, 233);
+    border-radius: 1em;
+    cursor: pointer;
+}
+#todoList {
+    list-style-type: none;
+    text-align: left;
+    padding: 0 4em;
+}
+#todoList button {
+    color: rgb(240, 233, 233);
+    background: none;
+    border: 1px solid rgb(240, 233, 233);
+    border-radius: 1em;
+    cursor: pointer;
+    margin-right: 1em;
+}
 
 
 @media screen and (max-width: 2561px) {
@@ -116,6 +168,11 @@ body {
     }
     #dateCell, #emptyCell, #day {
         height: 1.3em;
+    }
+    /*todoList*/
+    #todoContainer {
+        width: 65vh;
+        height: 65vh;
     }
 }
 
@@ -144,6 +201,11 @@ body {
     #dateCell, #emptyCell, #day {
         height: 1.5em;
     }
+    /*todoList*/
+    #todoContainer {
+        width: 55vh;
+        height: 55vh;
+    }
 }
 
 @media screen and (max-width: 1025px) {
@@ -156,6 +218,12 @@ body {
     #dateCell, #emptyCell, #day {
         height: 1.7em;
     }
+
+    /*todoList*/
+    #todoContainer {
+        width: 45vh;
+        height: 45vh;
+    }
 }
 
 @media screen and (max-width: 769px) {
@@ -164,6 +232,10 @@ body {
     }
     #dateCell, #emptyCell, #day {
         height: 2em;
+    }
+    #todoContainer {
+        width: 45vh;
+        height: 45vh;
     }
 }
 
@@ -186,5 +258,9 @@ body {
     #jumpMoveModal select {
         width: 7em;
         height: 2em;
+    }
+    #todoContainer {
+        width: 35vh;
+        height: 35vh;
     }
 }

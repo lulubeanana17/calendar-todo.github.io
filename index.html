@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
+    <script defer src="todo.js"></script>
     <script defer src="calendar.js"></script>
     <link rel="stylesheet" href="calendar.css">
 </head>
@@ -46,6 +47,15 @@
             </div>
             <div id="dates"></div>
         </div>
+        <div id="todoContainer" class="hidden">
+            <form id="todo">
+                <h2></h2>
+                <input required type="text" maxlength="15" placeholder="What to do">
+            </form>
+            <button id="closeTodo">X</button>
+            <ul id="todoList"></ul>
+        </div>
+        
     </div>
 </body>
 </html>

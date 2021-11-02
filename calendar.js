@@ -1,6 +1,7 @@
 let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
 const monthAll = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const dayAll = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const leftBtn = document.querySelector("#previousMove");
 const rightBtn = document.querySelector("#nextMove");
 const selectBtn = document.querySelector("#jumpMove");
@@ -26,30 +27,37 @@ function listUp(year, month) {
                 if(j >= firstDay) {
                     const cell = document.createElement("div");
                     cell.id = "dateCell";
+                    cell.classList.add("dateCell");
                     cell.innerText = dateCount;
                     line.appendChild(cell);
                     dateCount++;
                 } else {
                     const cell = document.createElement("div");
                     cell.id = "emptyCell";
+                    cell.classList.add("emptyCell");
                     cell.innerText = " ";
                     line.appendChild(cell);
                 }
             } else if(i > 0 && dateCount <= lastDate) {
                 const cell = document.createElement("div");
                     cell.id = "dateCell";
+                    cell.classList.add("dateCell");
                     cell.innerText = dateCount;
                     line.appendChild(cell);
                     dateCount++;
             } else {
                 const cell = document.createElement("div");
                     cell.id = "emptyCell";
+                    cell.classList.add("emptyCell");
                     cell.innerText = " ";
                     line.appendChild(cell);
             }
         }
         dates.appendChild(line);
     }
+    for(let i = 0; i < dateCell.length; i++) {
+        dateCell[i].addEventListener("click", openTodoList);
+      }
 }
 
 function previous(event) {
